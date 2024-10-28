@@ -23,7 +23,7 @@ function escape(str:string) {
     }
   })
 }
-const GRAPHQL_URL='http://localhost:3000/api/graphql'
+const GRAPHQL_URL='/api/graphql'
 
 const query={
     create:({front,back}:Partial<Card>)=>{
