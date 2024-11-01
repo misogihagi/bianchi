@@ -1,23 +1,27 @@
-import type { ReactElement, ReactNode } from 'react'
+"use client"
+import * as React from 'react'
+import type { ReactNode } from 'react'
 
 import Head from 'next/head'
 import Image from 'next/image'
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Typography,Stack,Divider,Box } from '@mui/material'
 
-export default function Layout({ children }:{children:ReactElement}) {
+export default function Layout({ children }:{children:ReactNode}) {
   return (
     <>
-<Head>
-<title>シンプル単語帳</title>
+    <html lang="en">
+        <title>シンプル単語帳</title>
 <meta name="description" content="simple memorization training" />
 <link rel="icon" href="/favicon.ico" />
-</Head>
+      <body>
 
 <main>
+  <AppRouterCacheProvider>
   <Stack
   
   divider={<Divider orientation="vertical" flexItem />}
@@ -43,7 +47,10 @@ export default function Layout({ children }:{children:ReactElement}) {
 {children}
 </Box>
 </Stack>
+</AppRouterCacheProvider>
 </main>
-    </>
+</body>
+    </html>
+        </>
   )
 }

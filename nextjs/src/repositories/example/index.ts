@@ -1,7 +1,7 @@
-import type { Card } from "../../../interface/graphql"
+import type { Card } from "../../../../interface/graphql"
 import type {Repository} from '../type'
 
-import { genId } from "../../../utils"
+import { genId } from "../../../../utils"
 
 const db = [
     { id: genId(), front: 'back', back: "front"},

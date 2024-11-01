@@ -1,17 +1,18 @@
+"use client"
 import type { FC } from 'react'
 import type { NextPage } from 'next'
 
 import { useState } from 'react'
-import { createData,uploadImages } from '../graphql/client'
+import { createData,uploadImages } from '../../graphql/client'
 
 import Button from '@mui/material/Button';
 import {ArrowBackIos,ArrowForwardIos,PhotoCamera} from '@mui/icons-material';
 import { Typography,TextareaAutosize,Stack,Card,CardContent } from '@mui/material'
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid';
 
 import ReactMarkdown from 'react-markdown';
 
-import { ImageUploader } from '../components/ImageUploader';
+import { ImageUploader } from '../../components/ImageUploader';
 
 type CardsProps={
   setFront:(value:string)=>void,
@@ -88,7 +89,7 @@ const Control:FC<ConctrolProps>=({stepBack,createNote,deleteNote,stepForward})=>
 </Stack>
 )
 
-const Home: NextPage = () => {
+export function Page (){
   const [front, setFront] = useState('');
   const [back, setBack] = useState('');
 
@@ -120,4 +121,4 @@ const Home: NextPage = () => {
   )
 }
 
-export default Home
+export default Page

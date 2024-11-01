@@ -1,7 +1,7 @@
 import { GraphQLError } from 'graphql';
 import { useRepository } from "../repositories"
-import type { Result } from '../../interface';
-import type { Card } from '../../interface/graphql';
+import type { Result } from '../../../interface';
+import type { Card } from '../../../interface/graphql';
 
 async function useHandleError<T>(fn:()=>Promise<Result<T>>):Promise<T>{
   const result=await fn()

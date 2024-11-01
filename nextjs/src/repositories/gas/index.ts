@@ -1,6 +1,6 @@
-import type { Card } from "../../../interface/graphql"
+import type { Card } from "../../../../interface/graphql"
 import type {Repository} from '../type'
-import type {Result,CreatePostRequest,ReadPostRequest,CreatePostResponse,ReadPostResponse} from '../../../interface/index'
+import type {Result,CreatePostRequest,ReadPostRequest,CreatePostResponse,ReadPostResponse} from '../../../../interface/index'
 
 if(!process.env.API_URL || !process.env.SECRET){
   process.exit()

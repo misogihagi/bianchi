@@ -1,4 +1,4 @@
-import {Card} from '../../interface/graphql'
+import {Card} from '../../../interface/graphql'
 
 
 //https://github.com/joliss/js-string-escape/blob/master/index.js

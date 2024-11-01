@@ -1,9 +1,9 @@
-import type { Card } from "../../../interface/graphql"
+import type { Card } from "../../../../interface/graphql"
 import type {Repository} from '../type'
 
 import sqlite3 from "sqlite3"
 import schema from "../schema";
-import { genId } from "../../../utils"
+import { genId } from "../../../../utils"
 
 
 const db = new sqlite3.Database("./test.db");

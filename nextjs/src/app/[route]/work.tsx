@@ -1,11 +1,10 @@
+"use client"
+import * as React from 'react'
 import type { FC } from 'react'
-import type { NextPage } from 'next'
-import type { Card  as Data} from '../../interface/graphql'
+import type { Card  as Data} from '../../../../interface/graphql'
 
 import { useState } from 'react'
-import { readData } from '../graphql/client'
-
-import Link from 'next/link'
+import { readData } from '../../graphql/client'
 
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
@@ -61,7 +60,7 @@ return <Card variant="outlined"  onClick={()=>props.toggleIsFlipped()}>
 </Card>
 }
 
-const Home: NextPage = () => {
+export function Page(){
   const [isFlipped, setIsFlipped] = useState(false);
   const [data, setData] = useState([] as Data[]);
   const [index, setIndex] = useState(0);
@@ -96,4 +95,4 @@ const Home: NextPage = () => {
   )
 }
 
-export default Home
+export default Page
